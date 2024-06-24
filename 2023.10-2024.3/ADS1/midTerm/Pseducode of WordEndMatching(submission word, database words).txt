@@ -1,0 +1,22 @@
+function wordEndMatching(submissionWord, databaseWords):
+    submissionEnd = getLastSyllablesOrPhonemes(submissionWord)
+    
+    matchingWords = []
+    
+    for word in databaseWords:
+        databaseEnd = getLastSyllablesOrPhonemes(word)
+        
+        if submissionEnd == databaseEnd:
+            matchingWords.append(word)
+        end if
+    end for
+    return matchingWords
+
+function getLastSyllablesOrPhonemes(word):
+    # Implementation to extract the last syllables or phonemes of a word
+    # This can involve linguistic analysis or predefined rules
+
+    # Placeholder: Just returning the last three characters for illustration
+
+    databasePhonemes = upload(data)
+    return databasePhonemes["word"][-3:]

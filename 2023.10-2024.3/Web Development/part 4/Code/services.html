@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Marvel Universe Theme Park - Services</title>
+  <meta charset="utf-8">
+  <meta name="refresh" content="120">
+  <meta name="author" content="Marvel GmbH">
+  <meta name="description" content="Marvel Universe Amusement Park and Hotel-Resort located in Munich. This extraordinary amusement park offers visitors the opportunity to step into the world of their favorite superheroes and supervillains, experiencing the magic and excitement of the Marvel Universe.">
+  <meta name="keywords" content="Marvel Universe, Marvel Universe Amusement Park, Amusement park">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow"> 
+  <link rel="stylesheet" type="text/css" href="StyleSheets/ServicesStyle.css">
+  <link rel="stylesheet" type="text/css" href="StyleSheets/style.css">
+</head>
+
+<body>
+<!-- 
+Code created by Maria - 
+This code is used for our horizontal navigation bar at the top of the page, which users will be able to select their desired page
+-->
+<header>
+    <!--navigation links to access the other pages and to buy tickets-->
+    <nav class="header-nav">
+        <ul>
+            <li><a class="nav-links" href="index.html">Home</a></li>
+            <li><a class="nav-links" href="attractions.html">Attractions</a></li>
+            <li><a class="nav-links" href="services.html">Services</a></li>
+            <li><a class="nav-links nav-links-buyticket" href="attractions.html#tickets">Buy tickets now!</a></li>
+        </ul>
+    </nav>
+    <h1 class="park-name park-name-big">Marvel Universe Theme Park -
+        <br>
+        Services
+    </h1>
+</header>
+
+<!-- 
+Code created by Ryan & Swen - 
+Below the code is displaying an image, heading and a paragraph with a description of the dinner services
+There is also a button which the user can press to take them to the reservation page for restaurants
+-->
+
+<div id="DinnerServices">
+    <!-- 
+    The image below was created with BingAI which can be found at the following link 
+    https://www.bing.com/images/create/marvel-universe-shows-amusement-park/1-6583933720f5461a9824d755239b3450?FORM=GUH2CR
+    -->
+    <img class="ServiceImage" src="img/ServicesPage/DiningServicesImage.png" alt="Marvel Theme Park Dining Services Image">
+
+    <div class="textServices">
+        <h2>Dining Services</h2>
+        <div >
+            <!-- 
+            The following part is dining service. We describe the characteristics and classification of dining in our park, 
+            and provide a reservation div, including four options. We also have a reserve button to collect data.
+            -->  
+            <p class="ServiceDescription">
+                At our theme park we have a variety of Dining services available, including our All Star American Diner and our Famous Pizzeria!<br>
+                We also have dining options for all; Families, Couples, Large groups and we can cater for any dietary requirements!<br>
+                If you are interested in reserving a table for any of our Restaurants please complete the options below and then press the Reserve button!
+            </p>
+            <div id = "DiningBooking">
+                <label for="RestaurantType" class="SelectionBoxes" id="RestaurantTypeSelector">Restaurant</label>    
+                <select class="selector" name="RestaurantSelector" id="RestaurantType">
+                <option value="0">----------------</option>
+                <option value="Pizzeria">Pizzeria</option>
+                <option value="American Diner">American Diner</option>
+                <option value="Oriental Restaurant">Oriental Restaurant</option>
+                <option value="Pasta Buffet">Pasta Buffet</option>
+                <option value="Curry House">Curry House</option>
+                <option value="Mexican Street Food">Mexican Street Food</option>
+                </select>
+
+                <br>
+                <label for="BookingDate" class="SelectionBoxes" id="BookingDateSelector">Date</label>    
+                <select class="selector" name="DateSelector" id="BookingDate">
+                <option value="0">----------------</option>
+                <option value="Monday">Monday</option>
+                <option value="Tuesday">Tuesday</option>
+                <option value="Wednesday">Wednesday</option>
+                <option value="Thursday">Thursday</option>
+                <option value="Friday">Friday</option>
+                <option value="Saturday">Saturday</option>
+                <option value="Sunday">Sunday</option>
+                </select>
+
+                <br>
+                <label for="BookingSize" class="SelectionBoxes" id="PartySizeSelector">Party Size</label>    
+                <select class="selector" name="SizeSelector" id="BookingSize">
+                <option value="0">----------------</option>
+                <option value="1 or 2">1 - 2 Party members</option>
+                <option value="3 or 4">3 - 4 Party members</option>
+                <option value="5 or 6">5 - 6 Party members</option>
+                <option value="7 or 8">7 - 8 Party members</option>
+                <option value="9 or more">9+ Party members</option>
+                </select>
+
+                <br>
+                <label for="DietaryRequirements" class="SelectionBoxes" id="DietaryTypeSelector">Dietary Requirements</label>    
+                <select class="selector" name="DietarySelector" id="DietaryRequirements">
+                <option value="0">----------------</option>
+                <option value="Vegetarian Options">Vegetarian Options</option>
+                <option value="Vegan Options">Vegan Options</option>
+                <option value="Kosher">Kosher</option>
+                <option value="Keto">Keto</option>
+                <option value="Medical Condition">Medical Condition</option>
+                <option value="Other">Other</option>
+                </select>    
+            </div>
+            <div>
+                <br>
+                <p>Please include your e-mail address below to receive further details with regard to the reservation:</p>
+                <input type="text" id="inputField" name="emailaddress" placeholder="Your e-mail address" class="textBox">
+                <a class="service-links service-links-bookTable" href="services.html">Reserve a Table!</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- The code below will be adapted into just Hotel Services-->
+<div id="HotelServices">
+    <!-- 
+    The image below was created with BingAI which can be found at the following link 
+    https://www.bing.com/images/create/marvel-universe-shows-amusement-park/1-6583933720f5461a9824d755239b3450?FORM=GUH2CR
+    -->
+    <img class="ServiceImage" src="img/ServicesPage/HotelServicesImage2.png" alt="Marvel Theme Park Hotel Services Image">
+    <div class="textServices">
+        <p class="h8">Hotel Services</p>
+        <div>
+            <!-- 
+            The following part is hotel service. We describe the characteristics and classification of the including hotel services
+            in our park, and provide a reservation div, including four options. We also build a reserve button to collect the data.
+            -->  
+            <p class="ServiceDescription">
+            At our theme park we have a variety of Hotel available, such as weekend stays in our luxurious 5 star hotel for as little as €100 a night!<br>
+            We have several optional food packages available, including Breakfast, Snacks and All Inclusive!<br>
+            If you are interested in reserving a room in our Hotel please press complete the options below and then press the Reserve button!
+            </p>
+            <div id="HotelBooking">
+                <label for="HotelPartySize" class="SelectionBoxes" id="HotelPartySizeSelector">Party Size</label>    
+                <select class="selector" name="SizeSelector" id="HotelPartySize">
+                <option value="0">----------------------</option>
+                <option value="1 or 2">1 - 2 Party members</option>
+                <option value="3 or 4">3 - 4 Party members</option>
+                <option value="5 or 6">5 - 6 Party members</option>
+                <option value="7 or 8">7 - 8 Party members</option>
+                <option value="9 or more">9+ Party members</option>
+                </select>
+
+                <br>
+                <label for="RoomAmount" class="SelectionBoxes" id="RoomAmountSelector">Amount of Rooms</label>    
+                <select class="selector" name="SizeSelector" id="RoomAmount">
+                <option value="0">----------------------</option>
+                <option value="1 Room">1 Room</option>
+                <option value="2 Rooms">2 Rooms</option>
+                <option value="3 Rooms">3 Rooms</option>
+                <option value="4 or More Rooms"> 4 or More Rooms</option>
+                </select>
+
+                <br>
+                <label for="RoomType" class="SelectionBoxes" id="RoomTypeSelector">Room Type</label>    
+                <select class="selector" name="SizeSelector" id="RoomType">
+                <option value="0">----------------------</option>
+                <option value="Single">Single Bed Room</option>
+                <option value="Double">Double Bed</option>
+                <option value="Double Double">2 Double Beds</option>
+                <option value="Family Room">Family Room</option>
+                </select>
+
+                <br>
+                <label for="MealPlan" class="SelectionBoxes" id="MealPlanSelector">Food Package</label>    
+                <select class="selector" name="SizeSelector" id="MealPlan">
+                <option value="0">----------------------</option>
+                <option value="None">None</option>
+                <option value="Breakfast Only">Breakfast Only</option>
+                <option value="Breakfast & Dinner">Breakfast & Dinner</option>
+                <option value="Snacks">Snacks</option>
+                <option value="All Inclusive">All Food and Meals included</option>
+                </select>
+
+            </div>
+
+            <div>
+                <br> 
+                <p>Please include your e-mail address below to receive further details with regard to the reservation:</p>
+                <input type="text" id="emailTicket" name="emailaddress" placeholder="Your e-mail address" class="textBox">
+                <a class="service-links service-links-bookTable" href="services.html">Book A Room!</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="PhotoServices">
+    <!-- 
+    The image below was created with BingAI which can be found at the following link 
+    https://www.bing.com/images/create/marvel-universe-shows-amusement-park/1-6583933720f5461a9824d755239b3450?FORM=GUH2CR
+    -->
+    <img class="ServiceImage" src="img/ServicesPage/MarvelPhotoServicesResize.png" alt="Marvel Theme Park Photo Services Image">
+    <div class="textServices">
+        <h4>Photo Services</h4>
+        <div>
+            <p class="ServiceDescription">
+            We have many different photo services available at the theme park, including photo shoots, professional camera personnel for weddings or events and even a film crew documenting your day at the park!
+            <br> Please see below for the prices of our wide variety of Photo Services!
+            </p>
+            <!-- 
+            Code created by Ryan
+            Below is the code displaying a table with the prices for Photo Services at our theme park
+            -->
+            <div id="PhotoPrices">
+                <p id="PhotoServicesText">Photo Services Prices</p>
+                <table class="center">
+                    <tr>
+                        <th>Photo Services</th>
+                        <th>Price</th>
+                    </tr>
+                    <tr>
+                        <td>Single Photo</td>
+                        <td>€5</td>
+                    </tr>
+                    <tr>
+                        <td>Collection of 20 Digital Photos</td>
+                        <td>€25</td>
+                    </tr>
+                    <tr>
+                        <td>Photo Shoot</td>
+                        <td>€75</td>
+                    </tr>
+                    <tr>
+                        <td>Photo Shoot with Cosplay</td>
+                        <td>€100</td>
+                    </tr>
+                    <tr>
+                        <td>Wedding or Event Professional Camera Package</td>
+                        <td>€250</td>
+                    </tr>
+                    <tr>
+                        <td>Personal Film Crew</td>
+                        <td>€1000</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="TransportServices">
+    <!-- 
+    The image below was created with BingAI which can be found at the following link 
+    https://www.bing.com/images/create/marvel-universe-shows-amusement-park/1-6583933720f5461a9824d755239b3450?FORM=GUH2CR
+    -->
+    <img class="ServiceImage" src="img/ServicesPage/MarvelTransportServicesResize.png" alt="Marvel Theme Park Transport Services Image">
+
+    <div class="textServices">
+        <h5 style="text-align:center;">Transport Services</h5>
+        <div style="text-align:center;">
+            <p class="ServiceDescription">
+            At the theme park we have a wide selection of transport services. The whole theme park is wheelchair accessible  and we have golf carts, trams, push buggies and much more available on site so we can suit your every need.<br>
+            We have 5 on site medical centers available, all with step free access. If in the case of an emergency our medical team is not fully equipped for, we have a medical team helicopter available so you can be transported to the nearest major hospital as soon as possible.<br>
+            </p>
+        </div>
+    </div>
+</div>
+
+<!-- 
+Code created by Ryan & Swen - 
+This is where the user can select certain services and find more info out about them using the details element
+-->
+<div id="MapKey" class="scrollmenu">
+    <img id="MapImage" src= img/ServicesPage/themeParkMapForServices.png alt = "Theme park map displaying service locations" width="1000" height="600">
+    <div class="textServices">
+        <h6>Theme Park Map</h6>
+        <p class="h7">Map Key:</p>
+        <div id="KeyDescription">
+                <a id="ParkEntrance"></a>
+                <img class="ServiceDescriptionImg" src="img/ServicesPage/Arrow.png" alt="Green Arrow"> <b class="KeyFont">: Park Entrance</b>
+        <p class="MapDescription"> The entrance and exit of the park is located where the green arrow is on the map! If you need assistance there are many staff available here.</p>
+                <a id="RidesAndAttractions"></a>
+                <img class="ServiceDescriptionImg" src="img/ServicesPage/RedCircle.png" alt="Red Circle">
+                <b class="KeyFont">: Rides & Attractions</b> 
+            <p class="MapDescription">Each ride or attractions is located on the Park Map by a red circle. If you would like to see our full list of rides and what they offer please click <a href="attractions.html">here</a>.</p>
+                <a id="Toilets"></a>
+                <img class="ServiceDescriptionImg" src="img/ServicesPage/YellowCircle.png" alt="Yellow Circle">
+                <b class="KeyFont">: Toilets</b>
+            <p class="MapDescription">Throughout our park we have many restroom facilities available, the services are free to use and also have accessibility for wheelchair users as well as diaper changing facilities.</p>
+                <a id="Wheelchair_Services"></a>
+                <img class="ServiceDescriptionImg" src="img/ServicesPage/Chair.png" alt="Orange Chair">
+                <b class="KeyFont">: Information Center & Wheelchair Services</b>
+            <p class="MapDescription"> Near the entrance of our park we have our Information Center where our Wheelchair support team is located. Our entire park has step free access, we also have wheelchairs available to borrow on request and if you require further assistance traveling around the park we have dedicated team members who can assist you.</p>
+                <a id="Lockers"></a>
+                <img class="ServiceDescriptionImg" src="img/ServicesPage/Square.png" alt="Blue Square">
+                <b class="KeyFont">: Locker Room</b> 
+            <p class="MapDescription">We have lockers available at our park and each locker is free to rent! To access the lockers you will need to scan your park ticket.</p>
+                <a id="FoodCanteen"></a>
+                <img class="ServiceDescriptionImg" src="img/ServicesPage/Pentagon.png" alt="Orange Pentagon">
+                <b class="KeyFont">: Food Canteen Hall</b>
+            <p class="MapDescription">We have over 10 unique food services on site at our canteen hall so we are able to cater for everyone! We have a wide variety including; Hot dogs stand, Mexican street food, Traditional Chinese food, Pizza & Pasta restaurant, Fast Food restaurant and our Finest Vegan cuisine!</p>
+                <a id="Shopping"></a>
+                <img class="ServiceDescriptionImg" src="img/ServicesPage/Triangle.png" alt="Yellow Circle">
+                <b class="KeyFont">: Shopping District</b> 
+                <p class="MapDescription">You can find all our shops within the shopping district, from gift shops, to designer boutiques our theme park has it all! If you do require assistance regarding locating a specific item you wish to purchase, please contact a member of staff.</p>
+        </div>
+    </div>
+</div>
+
+<!-- 
+Code created by Maria - 
+Below the code is used to display the contact information for the theme park and other useful info the consumers would need. 
+-->
+<footer>
+    <div class="footer-content">
+        <h3 class="park-name park-name-small">Marvel Universe Theme Park</h3>
+        <div class="General-Info">
+            <ul>
+                <li id="information"><a href="index.html#About">About us</a></li>
+                <li class="divisor">|</li>
+                <li id="contact">Contact Us: &plus; 49 175 000 000; MarvelPark&#64;email.com</li>
+                <li class="divisor">|</li>
+                <li id="address">Address: Projektenstr. 56, Munich, Germany</li>
+            </ul>
+        </div>
+        <div class="media">
+            <!-- 
+            icons retrieved from: https://icons8.com/icons/set/twitter
+            https://icons8.com/icon/118640/tiktok
+            https://icons8.com/icons/set/social-media 
+            -->
+            <a href="https://www.youtube.com/" target="_blank">
+                <img class="social-media" src="img/youtube.svg" alt="youtube icon">
+            </a>
+            <a href="https://www.facebook.com/" target="_blank">
+                <img class="social-media" src="img/facebook.svg" alt="facebook icon">
+            </a>
+            <a href="https://www.instagram.com/" target="_blank">
+                <img class="social-media" src="img/instagram.svg" alt="instagram icon">
+            </a>
+            <a href="https://www.tiktok.com/en/" target="_blank">
+                <img class="social-media" src="img/tiktok.svg" alt="tiktok icon">
+            </a>
+            <a href="https://twitter.com/" target="_blank">
+                <img class="social-media" src="img/twitter.svg" alt="twitter icon">
+            </a>
+        </div>
+        <p>Copyright &copy;2023 Marvel Universe Theme Park GmbH </p>
+    </div>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,34 @@
+\documentclass{article}
+\usepackage{graphicx} % Required for inserting images
+\usepackage{amssymb}
+\usepackage{mathtools}
+\usepackage{amsmath}
+\graphicspath{{./images/}}
+
+\makeatletter
+\newcommand*{\rom}[1]{\expandafter\@slowromancap\romannumeral #1@}
+\makeatother
+
+
+
+\title{Midterm of FCS}
+\author{Swen Chan}
+\date{July 2023}
+
+\begin{document}
+
+\maketitle
+
+\section*{2}
+\textbf{Basic step:}\\
+when \(n=1,n(n^2+5)=6\),which is devided by 6.\\\\
+\textbf{Hypothesis step:}\\
+Assuming \(n=k,\forall k\in Z^+,k(k^2+5)\) is divided by 6.\\\\
+\textbf{Inductive step:}\\We want to show that \(n=k+1\) such that \((k+1)((k+1)^2+5)\) is also divided by 6,when \(k\in Z^+\).\\
+\((k+1)((k+1)^2+5)\\=(k+1)(k^2+2k+6)\\=k(k+1)(k+2)+6(k+1)\)\\
+(1)\(6(k+1)\) is divided by 6. \\
+(2)\(\frac {k(k+1)(k+2)}{6}=1^2+2^2+...+k^2\in Z^+\) ,\\so \(k(k+1)(k+2)=6(1^2+2^2+...+k^2)\),which is also divided by 6.\\\\
+Conclusion: \(\forall n\in Z^+\),6 divides \(n(n^2+5).\)\\\\
+
+\end{document}
+

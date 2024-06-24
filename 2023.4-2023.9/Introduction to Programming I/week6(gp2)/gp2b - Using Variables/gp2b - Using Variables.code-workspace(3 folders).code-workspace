@@ -1,0 +1,17 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "../gp2a - Game Character"
+		},
+		{
+			"path": "../../week4/gp1 - background scenery"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "gp2b - Using Variables",
+		"liveServer.settings.port": 5501
+	}
+}

@@ -1,0 +1,765 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- 
+Code in the head and the header created by Maria 
+-->
+<head>
+    <title>Marvel Universe Theme Park - Attractions</title>
+    <meta charset="utf-8">
+    <meta name="refresh" content="120">
+    <meta name="author" content="Marvel GmbH">
+    <meta name="description" content="Marvel Universe Amusement Park and Hotel-Resort located in Munich. This extraordinary amusement park offers visitors the opportunity to step into the world of their favorite superheroes and supervillains, experiencing the magic and excitement of the Marvel Universe.">
+    <meta name="keywords" content="Marvel Universe, Marvel Universe Amusement Park, Amusement park">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow"> 
+    <link rel="stylesheet" type="text/css" href="StyleSheets/AttractionsStyle.css">
+    <link rel="stylesheet" type="text/css" href="StyleSheets/style.css">
+</head>
+
+<body>
+  <header>
+    <!--navigation links to access the other pages and to buy tickets-->
+    <nav class="header-nav">
+        <ul>
+            <li><a class="nav-links" href="index.html">Home</a></li>
+            <li><a class="nav-links" href="attractions.html">Attractions</a></li>
+            <li><a class="nav-links" href="services.html">Services</a></li>
+            <li><a class="nav-links nav-links-buyticket" href="#tickets">Buy tickets now!</a></li>
+        </ul>
+    </nav>
+    
+    <h1 class="park-name park-name-big">Marvel Universe Theme Park -
+      <br>
+      Attractions
+    </h1>
+  </header>
+
+<!-- 
+Code below created by Aamna-
+This code includes an interactive map, rides with a filter button, hover over boxes, and a ticket pricing chart
+-->
+<!--interactive park map code with clickable icons-->
+  <div class="interactiveParkMap">
+      <img id="park-map" src= img/AttractionsPage/themeParkMap.png 
+      alt = "map of theme park"
+      width ="640"
+      height="540"
+      usemap="#parkMap">
+        <p>
+            Hover over an icon above to view the ride's name! 
+            If you would like more details on the ride, click on a red icon.
+            <!--br tag to put the following line of text on a new line-->
+            <br><strong>'View All'</strong> button must be selected to use the interactive park map.
+        </p>
+      <map name="parkMap">
+      <!--clickable icons on the map are made using the map tag, the area shape 
+      is circles, and the coordinates correspond to icons on the map. 
+      Icons are linked to a ride description box below in the page. 
+      'Title' shows a short desc. of the icon when hovered over-->
+        <area shape="circle" 
+        coords ="150,50,40" 
+        alt="Spiderman roller coaster location" 
+        href="#IntotheSpiderverse"
+        title="Into The Spiderverse">
+
+        <area shape="circle" 
+        coords ="300,60,40" 
+        alt="superhero water slide location" 
+        href="#TheSuperheroSlide"
+        title="The Superhero Slide">
+
+        <area shape="circle" 
+        coords ="480,110,40" 
+        alt="Hulk roller coaster location"
+        href="#HulkSmash"
+        title="Hulk Smash">
+
+        <area shape="circle" 
+        coords ="320,240,40"
+        alt="Dr. Strange VR ride location" 
+        href="#DrStrangeMysticalRealm"
+        title="Dr. Strange's Mystical Realm">
+
+        <area shape="circle" 
+        coords ="310,170,40" 
+        alt="ferris wheel location" 
+        href="#GuardiansoftheGalaxyFerrisWheel"
+        title="Guardians of the Galaxy Cosmos">
+
+        <area shape="circle" 
+        coords ="560,170,40" 
+        alt="tower location" 
+        href="#TheAvengersTower"
+        title="The Avengers Tower">
+
+        <area shape="circle" 
+        coords ="380,420,40" 
+        alt="Wakanda water ride location" 
+        href="#WakandaWaters"
+        title="Wakanda Waters">
+
+        <area shape="circle" 
+        coords ="170,230,40" 
+        alt="Avengers water ride location" 
+        href="#AvengersSplashZone"
+        title="Avengers Splash Zone">
+        
+        <area shape="circle" 
+        coords ="210,360,40" 
+        alt="Antman VR Ride location" 
+        href="#Ant-ManMicroverse"
+        title="Ant-Man Microverse">
+
+        <area shape="circle" 
+        coords ="380,150,40" 
+        alt="swing ride location" 
+        href="#ThorHammerSwing"
+        title="Thor's Hammer Swing">
+
+        <area shape="circle" 
+        coords ="400,280,40" 
+        alt="Wolverine water ride location" 
+        href="#WolverineX-TremeAdventure"
+        title="Wolverine's X-Treme Adventure">
+
+        <area shape="circle" 
+        coords ="515,350,40" 
+        alt="restaurant location" 
+        href="#MarvelUniverseRestaurant"
+        title="Marvel Universe Restaurant">
+
+        <area shape="circle" 
+        coords ="70,250,40" 
+        alt="theatre location" 
+        href="#ShowTheatre"
+        title="Avengers Assemble Theatre">
+      
+        <area shape="circle" 
+        coords ="400,200,40" 
+        alt="gift shop location" 
+        href="#GiftShop"
+        title="Marvel Universe Gift Shop">
+      </map>
+    </div>
+
+
+<!--Filter buttons and ride desc. boxes created without the use of Javascript:
+
+Inspired by:
+  Corso, Domenic. "How to Easily Create Pure CSS Tabs (No JavaScript Needed!)"
+  Youtube, Uploaded by dcode, Jun 23, 2021. 
+  https://www.youtube.com/watch?v=ghVn5VH9H4M&ab_channel=dcode.
+  [Accessed December 15, 2023]
+
+The code in the video explains how to make tabs in CSS using radio buttons. What I have done 
+to this code is modify it so that instead of the radio buttons as tabs, they fucntion as 
+filter buttons to sort elements.
+
+The ride filter buttons are created using input type radio buttons. The radio button lets user
+select only one button per group of buttons. This allows us to hide the buttons that are not checked 
+and display the contents of the one that is checked. Class, id and labels have been used
+for the functionality of the filter buttons, which work with CSS (see style sheet for more info). 
+The 'checked' value for button1 selects the 'view all' button by default. -->
+<div id="rides">
+  <div class="filterBtnBar">
+    <input type="radio" class="radioBtn" name="filterButtons" id="button1" checked >
+    <label for="button1" class="btnLabel">View All</label>
+      <!-- HTML code for the ride boxes include an href link (linked to 
+      the circle icon on the park map), a heading, picture and description -->
+
+      <div class="rideBoxes">
+        <section class="boxes">
+          <a id="IntotheSpiderverse"></a>
+            <div class="box">
+            <img src="img/AttractionsPage/rollercoaster.png"  
+            alt="Spiderman roller coaster image">
+              <h2>Into The Spiderverse</h2>
+              <div class="desc">
+                <p> Travel through different dimensions with Spiderman on this adventurous roller coaster ride! Through a series of twists, 
+                turns and loops, you will get to experience the thrill of swinging through the city.
+                </p>
+              </div>
+            </div>
+
+          <a id="TheSuperheroSlide"></a>
+          <div class="box">
+          <img src="img/AttractionsPage/waterslide.jpg" 
+          alt="superhero waterslide image ">
+            <h2>The Superhero Slide </h2>
+            <div class="desc">
+              <p>Join the world's mightiest superheroes in a water adventure unlike anything you've ever seen.
+              The Superhero Splash shoots you down a standing trap door into a high-speed fall, passing through colorful scenes and sound effects that let you experience the thrill of being a superhero. 
+              </p>
+            </div>
+          </div>
+  
+          <a id="HulkSmash"></a>
+          <div class="box">
+          <img src="img/AttractionsPage/rollercoaster2.png" 
+          alt="Hulk roller coaster image">
+            <h2>Hulk Smash</h2>
+            <div class="desc">
+              <p>Unleash your inner Hulk and smash your way through this thrilling roller coaster that tests your courage and adrenaline. 
+              With speeds reaching 125 kilometers per hour, this ride will have you clinging to the edge of your seat!
+              </p>
+            </div>
+          </div>
+  
+          <a id="DrStrangeMysticalRealm"></a>
+          <div class="box">
+          <img src="img/AttractionsPage/vr.jpg"  
+          alt="Dr.Strange VR ride image">
+            <h2>Dr.Strange's Mystical Realm</h2>
+            <div class="desc">
+              <p>Step into the magical realm and discover the secrets of the multiverse with Doctor Strange in this virtual reality ride. 
+              You will get to experience mind-bending illusions and 4D effects such as water and wind that will leave you mesmerized!
+              </p>
+            </div>
+          </div>
+  
+          <a id="GuardiansoftheGalaxyFerrisWheel"></a>
+          <div class="box">
+          <img src="img/AttractionsPage/ferrisWheel.jpg" 
+          alt="ferris wheel image">
+            <h2>Guardians of the Galaxy Cosmos</h2>
+            <div class="desc">
+              <p>Blast off into the cosmos on this Guardians of the Galaxy ferris wheel. Standing 180 feet in the air, this ride lets you enjoy
+              the breathtaking view of the park and beyond.
+              </p>
+            </div>
+          </div>
+  
+  
+          <a id="TheAvengersTower"></a>
+          <div class="box">
+          <img src="img/AttractionsPage/starkTower.png"
+          alt="tower image">
+            <h2>The Avengers Tower</h2>
+            <div class="desc">
+              <p>Visit the headquarters of Stark Industries and the Avengers as you explore The Avengers Tower.
+              From cutting-edge technology gadgets to a thrilling Iron Man ride, you will feel like you have stepped into the Marvel universe.
+              </p>
+            </div>
+          </div>
+  
+          <a id="WakandaWaters"></a>
+          <div class="box">
+          <img src="img/AttractionsPage/wakandawaterride.jpg" 
+          alt="Wakanda water ride image">
+            <h2>Wakanda Waters</h2>
+            <div class="desc">
+              <p> Explore the wonders of Black Panther's kingdom as you step into this futuristic boat ride! 
+              From waterfalls, mountains, tribal music, and stone statues, this boat ride will be one you'll never forget.
+              </p>
+            </div>
+          </div>
+  
+          <a id="AvengersSplashZone"></a>
+          <div class="box">
+          <img src="img/AttractionsPage/waterride.jpg" 
+          alt="Avengers water ride image">
+            <h2>Avengers Splash Zone</h2>
+            <div class="desc">
+              <p> Team up with the Avengers in this spinning water ride that uses water cannons, sprinklers and jets to give you a wet and wild experience. 
+              This is a ride you don't want to miss!
+              </p>
+            </div>
+          </div>
+  
+          <a id="Ant-ManMicroverse"></a>
+          <div class="box">
+          <img src="img/AttractionsPage/vr2.jpg" 
+          alt="Ant-Man VR Ride image">
+            <h2>Ant-Man Microverse</h2>
+            <div class="desc">
+              <p>Embark on an adventure with Ant-Man in this virtual reality ride, where you will shrink down to the size of ant and explore the Microverse, 
+              fight villains and overcome challenges along the way!
+              </p>
+            </div>
+          </div>
+  
+          <a id="ThorHammerSwing"></a>
+          <div class="box">
+          <img src="img/AttractionsPage/swingRide.jpg" 
+          alt="swing ride image">
+            <h2>Thor's Hammer Swing</h2>
+            <div class="desc">
+              <p>Possess the power of Thor as you swing through the air at a height of up to 100 meters. 
+              Don't miss the incredible view of the park!
+              </p>
+            </div>
+          </div>
+  
+          <a id="WolverineX-TremeAdventure"></a>
+          <div class="box">
+          <img src="img/AttractionsPage/wolverine.jpg" 
+          alt="Wolverine's water ride image">
+          <h2>Wolverine's X-Treme Adventure</h2>
+            <div class="desc">
+              <p>Wolverine's X-Treme Adventure will take you on the ride of your lifetime! Accompanied with sounds and special effects, you will progress your way through 
+              breathtaking scenes of the wilderness, powerful rapids and three high velocity drops. In the final moments of the ride, you will enter Wolverine's cave, where a waterfall drop awaits your exit!
+              </p>
+            </div>
+          </div>
+  
+          <a id="MarvelUniverseRestaurant"></a>
+          <div class="box">
+          <img src="img/AttractionsPage/restaurant.jpg" 
+          alt="restaurant image">
+            <h2>Marvel Universe Restaurant</h2>
+            <div class="desc">
+              <p> Whether you're looking for a light snack or a three-course meal, this restaurant is the perfect place for Marvel fans 
+              who want to enjoy a delicious meal. From Spiderman Spaghetti to Captain America pizza, we've got it all! 
+              </p>
+            </div>
+          </div>
+  
+          <a id="ShowTheatre"></a>
+          <div class="box">
+          <img src="img/AttractionsPage/stage.jpg"
+          alt="theatre image">
+            <h2>Avengers Assemble Theatre</h2>
+            <div class="desc">
+              <p>Come down to the theatre to see your favourite superheroes
+              come to life! Watch the Avengers save the world or take pictures with Spiderman at the Avengers Assemble Theatre. 
+              </p>
+            </div>
+          </div>
+  
+          <a id="GiftShop"></a>
+          <div class="box">
+          <img src="img/AttractionsPage/giftShop.png" 
+          alt="gift shop image">
+            <h2>Marvel Universe Gift Shop</h2>
+            <div class="desc">
+              <p>Make your trip unforgettable by finding a souvenir or a gift, for yourself or your friends, so that you can cherish your adventure
+              for years to come. Whether you're looking for a shirt,a mug or a collectible figure, you are sure to find something that suits your taste. 
+              </p>
+            </div>
+          </div>
+        </section>
+      </div>
+
+    <!-- this filter button shows only the roller coasters-->
+    <input type="radio" class="radioBtn" name="filterButtons" id="button2">
+    <label for="button2" class="btnLabel">Roller Coasters</label>
+      <div class="rideBoxes">
+        <section class="boxes">
+          <a id="IntotheSpiderverse1"></a>
+          <div class="box">
+          <img src="img/AttractionsPage/rollercoaster.png" 
+          alt="Spiderman roller coaster image">
+            <h2>Into The Spiderverse</h2>
+            <div class="desc">
+              <p> Travel through different dimensions with Spiderman on this adventurous roller coaster ride! Through a series of twists, 
+              turns and loops, you will get to experience the thrill of swinging through the city.
+              </p>
+            </div>
+          </div>
+
+          <a id="HulkSmash1"></a>
+          <div class="box">
+          <img src="img/AttractionsPage/rollercoaster2.png" 
+          alt="Hulk roller coaster image">
+            <h2>Hulk Smash</h2>
+            <div class="desc">
+              <p>Unleash your inner Hulk and smash your way through this thrilling roller coaster that tests your courage and adrenaline. 
+              With speeds reaching 125 kilometers per hour, this ride will have you clinging to the edge of your seat!
+             </p>
+            </div>
+          </div>
+        </section>
+      </div>
+  
+   <!-- this filter button shows only the VR rides-->
+    <input type="radio" class="radioBtn" name="filterButtons" id="button3">
+    <label for="button3" class="btnLabel">Virtual Reality</label>
+      <div class="rideBoxes">
+        <section class="boxes">
+          <a id="DrStrangeMysticalRealm1"></a>
+          <div class="box">
+          <img src="img/AttractionsPage/vr.jpg"  
+          alt="Dr.Strange VR ride image">
+            <h2>Dr.Strange's Mystical Realm</h2>
+            <div class="desc">
+              <p>Step into the magical realm and discover the secrets of the multiverse with Doctor Strange in this virtual reality ride. 
+              You will get to experience mind-bending illusions and 4D effects such as water and wind that will leave you mesmerized!
+              </p>
+            </div>
+          </div>
+    
+          <a id="Ant-ManMicroverse1"></a>
+          <div class="box">
+          <img src="img/AttractionsPage/vr2.jpg" 
+          alt="Ant-Man VR Ride image">
+            <h2>Ant-Man Microverse</h2>
+            <div class="desc">
+              <p>Embark on an adventure with Ant-Man in this virtual reality ride, where you will shrink down to the size of ant and explore the Microverse, 
+              fight villains and overcome challenges along the way!
+              </p>
+            </div>
+          </div>
+        </section>
+      </div>
+
+    <!-- this filter button shows only the kids and family rides-->
+    <input type="radio" class="radioBtn" name="filterButtons" id="button4">
+    <label for="button4" class="btnLabel">Kids & Family Rides</label>
+      <div class="rideBoxes">
+        <section class="boxes">
+          <a id="GuardiansoftheGalaxyFerrisWheel1"></a>
+          <div class="box">
+          <img src="img/AttractionsPage/ferrisWheel.jpg" 
+          alt="ferris wheel image">
+            <h2>Guardians of the Galaxy Cosmos</h2>
+            <div class="desc">
+              <p>Blast off into the cosmos on this Guardians of the Galaxy ferris wheel. Standing 180 feet in the air, this ride lets you enjoy
+              the breathtaking view of the park and beyond.
+              </p>
+            </div>
+          </div>
+  
+  
+          <a id="TheAvengersTower1"></a>
+          <div class="box">
+          <img src="img/AttractionsPage/starkTower.png"
+          alt="tower image">
+            <h2>The Avengers Tower</h2>
+            <div class="desc">
+              <p>Visit the headquarters of Stark Industries and the Avengers as you explore The Avengers Tower.
+              From cutting-edge technology gadgets to a thrilling Iron Man ride, you will feel like you have stepped into the Marvel universe.
+              </p>
+            </div>
+          </div>
+
+          <a id="ThorHammerSwing1"></a>
+          <div class="box">
+          <img src="img/AttractionsPage/swingRide.jpg" 
+          alt="swing ride image">
+            <h2>Thor's Hammer Swing</h2>
+            <div class="desc">
+              <p>Possess the power of Thor as you swing through the air at a height of up to 100 meters. 
+              Don't miss the incredible view of the park!
+              </p>
+            </div>
+          </div>
+        </section>
+      </div>
+
+    <!-- this filter button shows only the water rides-->
+    <input type="radio" class="radioBtn" name="filterButtons" id="button5">
+    <label for="button5" class="btnLabel">Water Rides</label>
+      <div class="rideBoxes">
+        <section class="boxes">
+          <a id="TheSuperheroSlide1"></a>
+          <div class="box">
+          <img src="img/AttractionsPage/waterslide.jpg" 
+          alt="superhero waterslide image ">
+            <h2>The Superhero Slide </h2>
+            <div class="desc">
+              <p>Join the world's mightiest superheroes in a water adventure unlike anything you've ever seen.
+              The Superhero Splash shoots you down a standing trap door into a high-speed fall, passing through colorful scenes and sound effects that let you experience the thrill of being a superhero. 
+              </p>
+            </div>
+          </div>
+
+          <a id="WakandaWaters1"></a>
+          <div class="box">
+          <img src="img/AttractionsPage/wakandawaterride.jpg"  
+          alt="Wakanda water ride image">
+            <h2>Wakanda Waters</h2>
+            <div class="desc">
+              <p> Explore the wonders of Black Panther's kingdom as you step into this futuristic boat ride! 
+              From waterfalls, mountains, tribal music, and stone statues, this boat ride will be one you'll never forget.
+              </p>
+            </div>
+          </div>
+  
+          <a id="AvengersSplashZone1"></a>
+          <div class="box">
+          <img src="img/AttractionsPage/waterride.jpg" 
+          alt="Avengers water ride image">
+            <h2>Avengers Splash Zone</h2>
+            <div class="desc">
+              <p> Team up with the Avengers in this spinning water ride that uses water cannons, sprinklers and jets to give you a wet and wild experience. 
+              This is a ride you don't want to miss!
+              </p>
+            </div>
+          </div>
+
+          <a id="WolverineX-TremeAdventure1"></a>
+          <div class="box">
+          <img src="img/AttractionsPage/wolverine.jpg" 
+          alt="Wolverine's water ride image">
+            <h2>Wolverine's X-Treme Adventure</h2>
+            <div class="desc">
+              <p>Wolverine's X-Treme Adventure will take you on the ride of your lifetime! Accompanied with sounds and special effects, you will progress your way through 
+              breathtaking scenes of the wilderness, powerful rapids and three high velocity drops. In the final moments of the ride, you will enter Wolverine's cave, where a waterfall drop awaits your exit!
+              </p>
+            </div>
+          </div>
+        </section>
+      </div>
+
+    <!-- this filter button shows all the other attractions-->
+    <input type="radio" class="radioBtn" name="filterButtons" id="tab6">
+    <label for="tab6" class="btnLabel">Other Attractions</label>
+      <div class="rideBoxes">
+        <section class="boxes">
+          <a id="MarvelUniverseRestaurant1"></a>
+          <div class="box">
+          <img src="img/AttractionsPage/restaurant.jpg" 
+          alt="restaurant image">
+            <h2>Marvel Universe Restaurant</h2>
+            <div class="desc">
+              <p> Whether you're looking for a light snack or a three-course meal, this restaurant is the perfect place for Marvel fans 
+              who want to enjoy a delicious meal. From Spiderman Spaghetti to Captain America pizza, we've got it all! 
+              </p>
+            </div>
+          </div>
+  
+          <a id="ShowTheatre1"></a>
+          <div class="box">
+          <img src="img/AttractionsPage/stage.jpg"
+          alt="theatre image">
+            <h2>Avengers Assemble Theatre</h2>
+            <div class="desc">
+              <p>Come down to the theatre to see your favourite superheroes
+              come to life! Watch the Avengers save the world or take pictures with Spiderman at the Avengers Assemble Theatre. 
+              </p>
+            </div>
+          </div>
+  
+          <a id="GiftShop1"></a>
+          <div class="box">
+          <img src="img/AttractionsPage/giftShop.png" 
+          alt="gift shop image">
+            <h2>Marvel Universe Gift Shop</h2>
+            <div class="desc">
+              <p>Make your trip unforgettable by finding a souvenir or a gift, for yourself or your friends, so that you can cherish your adventure
+              for years to come. Whether you're looking for a shirt,a mug or a collectible figure, you are sure to find something that suits your taste. 
+              </p>
+            </div>
+          </div>
+        </section>
+      </div>
+  </div>
+</div>
+
+<!---code for ticket purchasing section-->
+  <h4>Buy Tickets Now!</h4>
+    <div id="tickets">
+      <div class="imageRow">
+        <img src="img/AttractionsPage/showsTicket.png" alt="show ticket image">
+        <img src="img/AttractionsPage/individualPass.png" alt="single day individual pass image">
+        <img src="img/AttractionsPage/fastPass.png" alt="single day fast-lane pass image">
+        <img src="img/AttractionsPage/groupPass.png" alt="single day group pass image">
+        <img src="img/AttractionsPage/seasonPass.png" alt="multiple day season pass image">
+      </div>
+
+      <!---the code below creates table for ticket pricing and features-->
+      <div class = "TicketTable">
+        <table>
+          <thead>
+            <tr>
+              <th>Details</th>
+              <th>€50</th>
+              <th>€75</th>
+              <th>€35*</th>
+              <th>€110</th>
+            </tr>
+            <tr>
+              <th></th>
+              <th>Individual Pass</th>
+              <th>Fast-Lane Pass</th>
+              <th>Group Pass</th>
+              <th>Season Pass</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Free Parking</td>
+              <td>&#9989;</td>
+              <td>&#9989;</td>
+              <td>&#9989;</td>
+              <td>&#9989;</td>
+            </tr>
+            <tr>
+              <td>Fast-Lane</td>
+              <td>&#10060;</td>
+              <td>&#9989;</td>
+              <td>&#9989;</td>
+              <td>&#9989;</td>
+            </tr>
+            <tr>
+              <td>10% Discount on Photography Services</td>
+              <td>&#10060;</td>
+              <td>&#10060;</td>
+              <td>&#9989;</td>
+              <td>&#9989;</td>
+            </tr>
+            <tr>
+              <td>10% Discount at our Restaurant</td>
+              <td>&#10060;</td>
+              <td>&#10060;</td>
+              <td>&#10060;</td>
+              <td>&#9989;</td>
+            </tr>
+            <tr>
+              <td>Free Show Ticket</td>
+              <td>&#10060;</td>
+              <td>&#10060;</td>
+              <td>&#10060;</td>
+              <td>&#9989;</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td>*Valid for groups with 10-20 individuals.</td>
+              <td></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  
+
+  <!-- 
+  End of the code created by Aamna - 
+  -->
+
+  <!-- 
+  Code created by Maria - 
+  Below is the code for selecting and buying the tickets.
+  -->
+  <div id = "ticket-prices">
+    <label for="tickets-ind">Individual Pass:</label>    
+    <select class="selector" name="indivTicket" id="tickets-ind">
+      <option value="0">---</option>
+      <option value="1">1 Ticket: 50€</option>
+      <option value="2">2 Tickets: 100€</option>
+      <option value="3">3 Tickets: 150€</option>
+      <option value="4">4 Tickets: 200€</option>
+      <option value="5">5 Tickets: 250€</option>
+      <option value="6">6 Tickets: 300€</option>
+      <option value="7">7 Tickets: 350€</option>
+      <option value="8">8 Tickets: 400€</option>
+      <option value="9">9 Tickets: 450€</option>
+    </select>
+    <br><br>
+
+    <label for="tickets-fl">Fast-Lane Pass:</label>
+    <select name="fastLaneTicket" id="tickets-fl">
+      <option value="0">---</option>
+      <option value="1">1 Ticket: 75€</option>
+      <option value="2">2 Tickets: 150€</option>
+      <option value="3">3 Tickets: 225€</option>
+      <option value="4">4 Tickets: 300€</option>
+      <option value="5">5 Tickets: 375€</option>
+      <option value="6">6 Tickets: 450€</option>
+      <option value="7">7 Tickets: 525€</option>
+      <option value="8">8 Tickets: 600€</option>
+      <option value="9">9 Tickets: 675€</option>
+    </select>
+    <br><br>
+
+    <label for="tickets-gr">Group Pass:</label>
+    <select name="groupTicket" id="tickets-gr">
+      <option value="0">---</option>
+      <option value="1">Group of 10: 350€</option>
+      <option value="2">Group of 11: 385€</option>
+      <option value="3">Group of 12: 420€</option>
+      <option value="4">Group of 13: 455€</option>
+      <option value="5">Group of 14: 490€</option>
+      <option value="6">Group of 15: 525€</option>
+      <option value="7">Group of 16: 560€</option>
+      <option value="8">Group of 17: 595€</option>
+      <option value="9">Group of 18: 630€</option>
+      <option value="9">Group of 19: 665€</option>
+      <option value="9">Group of 20: 700€</option>
+    </select>
+    <br><br>
+
+    <label for="tickets-sP">Season Pass:</label>
+    <select name="seasonPass" id="tickets-sP">
+      <option value="0">---</option>
+      <option value="1">1 Ticket: 110€</option>
+      <option value="2">2 Tickets: 220€</option>
+      <option value="3">3 Tickets: 330€</option>
+      <option value="4">4 Ticket: 440€</option>
+      <option value="5">5 Tickets: 550€</option>
+      <option value="6">6 Tickets: 660€</option>
+      <option value="7">7 Tickets: 770€</option>
+      <option value="8">8 Tickets: 880€</option>
+      <option value="9">9 Tickets: 990€</option>
+    </select>
+    <br><br>
+
+    <label for="tickets-sh">Show Ticket:</label>
+    <select name="showPass" id="tickets-sh">
+      <option value="0">---</option>
+      <option value="1">1 Ticket: 10€</option>
+      <option value="2">2 Tickets: 20€</option>
+      <option value="3">3 Tickets: 30€</option>
+      <option value="4">4 Ticket: 40€</option>
+      <option value="5">5 Tickets: 50€</option>
+      <option value="6">6 Tickets: 60€</option>
+      <option value="7">7 Tickets: 70€</option>
+      <option value="8">8 Tickets: 80€</option>
+      <option value="9">9 Tickets: 90€</option>
+    </select>
+    <br><br>
+
+    <p>Please include your e-mail address below to receive further details with regard to the payment:</p>
+    <input type="text" id="emailTicket" name="emailaddress" placeholder="Your e-mail address" class="textBox">
+    <a class="Submit" href="attractions.html">&#187; Submit &#187;</a>
+  </div>
+  <!-- 
+  End of the code created by Maria - 
+  -->
+
+  <!-- 
+  Code created by Maria - 
+  Below the code is used to display the contact information for the theme park and other useful info the consumers would need. 
+  -->
+  <footer>
+    <div class="footer-content">
+        <h3 class="park-name park-name-small">Marvel Universe Theme Park</h3>
+        <div class="General-Info">
+            <ul>
+              <li id="information"><a href="index.html#About">About Us</a></li>
+              <li class="divisor">|</li>
+              <li id="contact">Contact Us: &plus; 49 175 000 000; MarvelPark&#64;email.com</li>              
+              <li class="divisor">|</li>
+              <li id="address">Address: Projektenstr. 56, Munich, Germany</li>
+            </ul>
+        </div>
+        <div class="media">
+            <!-- icons retrieved from: https://icons8.com/icons/set/twitter
+            https://icons8.com/icon/118640/tiktok
+            https://icons8.com/icons/set/social-media -->
+            <a href="https://www.youtube.com/" target="_blank">
+                <img class="social-media" src="img/youtube.svg" alt="youtube icon">
+            </a>
+            <a href="https://www.facebook.com/" target="_blank">
+                <img class="social-media" src="img/facebook.svg" alt="facebook icon">
+            </a>
+            <a href="https://www.instagram.com/" target="_blank">
+                <img class="social-media" src="img/instagram.svg" alt="instagram icon">
+            </a>
+            <a href="https://www.tiktok.com/en/" target="_blank">
+                <img class="social-media" src="img/tiktok.svg" alt="tiktok icon">
+            </a>
+            <a href="https://twitter.com/" target="_blank">
+                <img class="social-media" src="img/twitter.svg" alt="twitter icon">
+            </a>
+        </div>
+        <p>Copyright &copy;2023 Marvel Universe Theme Park GmbH </p>
+    </div>
+  </footer>
+
+</body>
+</html>
+

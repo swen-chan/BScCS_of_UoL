@@ -1,0 +1,292 @@
+
+h2 {
+    font-family: Copperplate, Papyrus, fantasy;
+    font-style: normal;
+    font-variant: normal;
+    font-size: 30px;
+    color: white;
+    text-align: center;
+    margin-top: 10px;
+}
+
+h4 {
+    font-family: Copperplate, Papyrus, fantasy;
+    font-style: normal;
+    font-variant: normal;
+    font-size: 30px;
+    color: white;
+    text-align: center;
+    margin-top: 10px;
+}
+
+h5 {
+    font-family: Copperplate, Papyrus, fantasy;
+    font-style: normal;
+    font-variant: normal;
+    font-size: 30px;
+    color: white;
+    text-align: center;
+    margin-top: 10px;
+}
+
+h3 {
+    color: black;
+}
+
+h6 {
+    font-family: Copperplate, Papyrus, fantasy;
+    font-style: normal;
+    font-variant: normal;
+    font-size: 30px;
+    color: white;
+    text-align: center;
+    margin-top: 2px;
+    margin-bottom: 2px;
+}
+
+.h7 {
+    font-family: Copperplate, Papyrus, fantasy;
+    font-style: normal;
+    font-variant: normal;
+    font-size: 30px;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.h8 {
+    font-family: Copperplate, Papyrus, fantasy;
+    font-style: normal;
+    font-variant: normal;
+    font-size: 30px;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.ServiceDescription {
+    
+    font-style: normal;
+    font-variant: normal;
+    font-weight: normal;
+    font-size: 15px;
+    letter-spacing: 1px;
+    line-height: 1.5;
+    color: white;
+    padding: 10px;
+    /* padding-left: 790px; */
+}
+
+hr.DinnerServicesLine {
+    line-height: 0;
+}
+
+hr.PhotoServicesLine {
+    line-height: 0;
+}
+
+hr.TransportServicesLine {
+    line-height: 0;
+}
+
+.center {
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 15px;
+  }
+
+.LineSpace {
+    line-break: strict;
+}
+
+#ReserveButton {
+    font-size: 20px;
+}
+
+img {
+    float:left
+  }
+
+#DinnerServices {
+    padding:10px;
+    color: white;
+    text-align:center;
+    width: 80%;
+    height: 20%;
+    margin-left: 10%;
+    margin-top: 5%;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    column-gap: 50px;
+    border-bottom: 1px solid rgba(255, 254, 254, 0.711);
+}
+
+#HotelServices {
+    padding:10px;
+    color: white;
+    text-align:center;
+    width: 80%;
+    margin-left: 10%;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    column-gap: 50px;
+    border-bottom: 1px solid rgba(255, 254, 254, 0.711);
+
+}
+
+#PhotoServices {
+    padding:10px;
+    color: white;
+    text-align:center;
+    width: 80%;
+    margin-left: 10%;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    column-gap: 50px;
+    border-bottom: 1px solid rgba(255, 254, 254, 0.711);
+
+}
+
+#TransportServices {
+    padding:10px;
+    color: white;
+    text-align:center;
+    width: 80%;
+    margin-left: 10%;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    column-gap: 50px;
+    border-bottom: 1px solid rgba(255, 254, 254, 0.711);
+}
+
+#MapKey {
+    padding: 10px;
+    color: white;
+    width: 80%;
+    margin-left: 10%;
+    margin-bottom: 100px;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    column-gap: 50px;
+}
+
+.KeyFont {
+    font-style: normal;
+    font-variant: normal;
+    font-size: 15px;
+    color: white;
+    font-weight: bold;
+}
+
+#KeyDescription {
+    padding-right: 10px;
+}
+
+.MapDescription {
+    font-style: normal;
+    font-variant: normal;
+    font-size: 15px;
+    color: white;
+    font-weight: normal;
+    margin-bottom: 40px;
+
+}
+
+#MapImage {
+    border: 1px solid rgba(255, 255, 255, 0.815);
+    box-shadow: 0px 1px 20px rgba(255, 255, 255, 0.589) inset;
+    border-radius: 20px;
+    padding: 10px;
+    width: 100%;
+    margin-top: 50px;
+}
+
+
+.ServiceImage {
+    border: 1px solid rgba(255, 255, 255, 0.815);
+    box-shadow: 0px 1px 20px rgba(255, 255, 255, 0.589) inset;
+    border-radius: 20px;
+    padding: 10px;
+    width: 100%;
+    margin-bottom: 100px;
+    margin-top: 50px;
+
+}
+
+.service-links { /*for the service html*/
+    display: inline-block;
+    font-size: 0.9em;
+    color: rgb(91, 223, 133);
+    text-decoration: none;
+    padding: 0.8em;
+    text-transform: uppercase;
+    
+}
+    
+.service-links-bookTable { /*book a table*/
+    font-weight: bold;
+    color:#040846;
+    background-color: rgba(3, 216, 3, 0.7);
+    border-radius:25px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+    
+.service-links:hover { /*links in the 'book a table' button is highlighted in gray upon hover*/
+    background-color: rgba(240, 4, 70, 0.852);
+}
+
+.SelectionBoxes {
+    padding: 5px;
+    display: inline-block;
+}
+
+#RestaurantTypeSelector {
+    margin-left: 40px;
+}
+
+#BookingDateSelector {
+    margin-left: 90px;
+}
+
+#PartySizeSelector {
+    margin-left: 49px;
+}
+
+#DietaryTypeSelector {
+    margin-left: -44px;
+}
+
+#PhotoPricesSummary {
+    font-size: 15px;
+}
+
+.ServiceDescriptionImg {
+    width: 24px;
+    height: 24px;
+}
+
+#HotelPartySizeSelector {
+    margin-left: 80px;
+}
+
+#RoomAmountSelector {
+    margin-left: 17px;
+}
+
+#RoomTypeSelector {
+    margin-left: 69px;
+}
+
+#MealPlanSelector {
+margin-left: 50px;
+}
+
+#PhotoServicesText {
+    font-weight: bold;
+    font-size: 18px;
+}

@@ -1,0 +1,28 @@
+function SOUNDEX(word)
+	word = word.upper()
+	soundex_code = word[0]
+	mapping = {'BFPV':'1', 'CGJKQSXZ':'2', 'DT':'3', 'L':'4', 'MN':'5', 'R':'6'}
+	
+	for chars, digit in mapping.items() do
+		for char in chars do
+			word = word.replace(char, digit)
+		end for
+	end for
+	
+	word = word[1:]
+	word = REMOVE_CONSECUTIVE_DUPLICATES(word)
+	soundex_code += word.ljust(3, '0')[:3]
+	
+	return soundex.code
+end function
+
+
+function REMOVE_CONSECUTIVE_DUPLICATES(word)
+	result = [word[0]]
+	for i in range(1, len(word)) do
+		if word[i] != word[i-1] do
+			result.append(word[i])
+		end if
+	end for
+	return ''.join(result)
+end function

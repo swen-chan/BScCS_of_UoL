@@ -1,0 +1,46 @@
+function FrequencyPlusRelevance(submissionWord, rhymingWords)
+    priotityList = []
+    for rhymingWord = rhymingWords[0] to rhymingWords[-1]
+        frequencyScore = calculateWordFrequency(rhymingWord)
+        relecanceScore = calculateSemanticRelevance(submissionWord, rhymingWord)
+        priorityScore = combineScores(frequencyScore, relevanceScore)
+
+        priotityList.append({'word': rhymingWord, 'priority': priorityScore})
+
+
+    priorityList.sort(key = lambda x: x['priority'], reverse = True)
+
+    return priorityList
+
+
+function calculateWordFrequency(word)
+    # Assuming a word frequency dataset is available
+    if word in wordFrequencyDataset
+        return wordFrequencyDataset[word]
+    else　return 0
+
+
+function calculateSemanticRelevance(word1, word2) 
+    # Implementation to calculate semantic relevance between two words using Word Embeddings
+    # This can involve using pre-trained word embeddings models
+    # Example using Word2Vec in Gensim
+    from gensim.models import Word2Vec
+
+    # Load pre-trained Word2Vec model
+    word2vec_model = Word2Vec.load('path/to/word2vec_model')
+
+    # Define relevance function
+    function calculate_relevance(word1, word2) 
+        vec1 = word2vec_model[word1]
+        vec2 = word2vec_model[word2]
+
+    # Calculate relevance using cosine similarity or other metrics
+    relevance = calculate_cosine_similarity(vec1, vec2)
+    return relevance
+
+function combineScores(score1, score2):
+    # Implementation to combine frequency and relevance scores
+    # Adjust weights based on the desired prioritization strategy
+    return 0.7*(score1)+0.3*(score2)
+
+

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Rhythm Generator</title>
+    <meta charset="UTF-8">
+    <meta name="refresh" content="120">
+    <meta name="author" content="Swen Chan">
+    <meta name="description" content=".">
+    <meta name="keywords" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow"> 
+
+    <!-- css file-->
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+    <!-- script files-->
+    <!-- main script-->   
+    <script src="script.js"></script>
+
+    <script src="soundexAlgorithm.js"></script>
+    <script src="generateRhythm.js"></script>
+    <script src="compare.js"></script>
+    <script src="calculateFrequency.js"></script>
+</head>
+
+<body>
+    <label for="wordInput">Enter a Word:</label>
+    <input type="text" id="wordInput" placeholder="Enter your input">
+    <button onclick="generateRhythms()">Generate Rhythm</button>
+    <div id="result"></div>
+</body>
+</html>

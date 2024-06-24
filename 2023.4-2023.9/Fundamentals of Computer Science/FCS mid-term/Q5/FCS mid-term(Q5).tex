@@ -1,0 +1,40 @@
+\documentclass{article}
+\usepackage{graphicx} % Required for inserting images
+\usepackage{amssymb}
+\usepackage{mathtools}
+\usepackage{amsmath}
+\graphicspath{{./images/}}
+
+\makeatletter
+\newcommand*{\rom}[1]{\expandafter\@slowromancap\romannumeral #1@}
+\makeatother
+
+
+
+\title{Midterm of FCS}
+\author{Swen Chan}
+\date{July 2023}
+
+\begin{document}
+
+\maketitle
+
+\section*{5}
+\textbf{a)}\\
+\(baa\)\\
+\textbf{b)}\\
+\(bbbb\)\\
+\textbf{c)}\\
+\(baba\)\\
+\textbf{d)}\\
+\(bab\)\\
+\textbf{e)}\\
+\(b^*(ab)^*(a^*\cup b^*) \)\\
+\textbf{f)}\\
+1)The strings have 11,but no 00:  \((1^+0\cup 0)11^+[0(1^+0)^*1^*]^*\)\\
+2)The strings have 00,but no 11:  \((0^+1\cup 1)00^+[1(0^+1)^*0^*]^*\)\\
+3)The strings haven't 00 or 11:   \((01)^*(0\cup \epsilon)\cup (10)^*(1\cup \epsilon)\)\\
+so,the required expression is:\\\(\{(1^+0\cup 0)11^+[0(1^+0)^*1^*]^*\}\cup \{(0^+1\cup 1)00^+[1(0^+1)^*0^*]^*\}\cup \{(01)^*(0\cup \epsilon)\cup (10)^*(1\cup \epsilon)\}\)
+
+\end{document}
+

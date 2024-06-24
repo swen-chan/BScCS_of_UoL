@@ -1,0 +1,38 @@
+\documentclass{article}
+\usepackage{graphicx} % Required for inserting images
+\usepackage{amssymb}
+\usepackage{mathtools}
+\usepackage{amsmath}
+\graphicspath{{./images/}}
+
+\makeatletter
+\newcommand*{\rom}[1]{\expandafter\@slowromancap\romannumeral #1@}
+\makeatother
+
+
+
+\title{Midterm of FCS}
+\author{Swen Chan}
+\date{July 2023}
+
+\begin{document}
+
+\maketitle
+
+\section*{ 1}
+
+\textbf{(a)}
+\(((R\longrightarrow S)\longrightarrow R)\longrightarrow R\\=((\lnot R\lor S)\longrightarrow R)\longrightarrow R\\=((R\land \lnot S)\lor R)\longrightarrow R\\=(\lnot (R\land \lnot S)\land \lnot R)\lor R\\=((\lnot R\lor S)\land \lnot R)\lor R\\=((\lnot R\land \lnot R)\lor (S\land \lnot R))\lor R\\=(\lnot R\lor (S\land \lnot R))\lor R\\=\lnot R\lor R\lor (S\land \lnot R)\\=T\lor (S\land \lnot R)\\=T\)\\
+\textbf{(b)}
+\((P\longleftrightarrow Q)\\\equiv(P\longrightarrow Q)\land (Q\longrightarrow P)\\\equiv(\lnot P\lor Q)\land (\lnot Q\lor P)\\\equiv((\lnot P\lor Q)\land \lnot Q)\lor ((\lnot P\lor Q)\land P)\\\equiv((\lnot P\land \lnot Q)\lor (Q\land \lnot Q))\lor ((\lnot P\land P)\lor(Q\land P))\\\equiv(\lnot P\land \lnot Q)\lor (Q\land P)\\\equiv(P\lor Q)\longrightarrow (P\land Q)
+\)...(1)\\
+and we can easily get that \((P\land Q)\longrightarrow (P\lor Q)\) is a tatuology by the following steps:\\
+\((P\land Q)\longrightarrow (P\lor Q)\\=\lnot P\lor \lnot Q\lor (P\lor Q)\\=(\lnot P\lor P)\lor (\lnot Q\lor Q)\\=T\lor T\\=T\)...(2)\\
+Thus,According to (1)(2),we can conclude that\\\((P\land Q)\longleftrightarrow (P\lor Q)\equiv (P\longleftrightarrow Q)\)
+\section*{(c)}
+\(\lnot (\forall x,P(x)\land [\exists x:Q(x)\land \lnot R(x)])\\=\exists x,\lnot P(x)\lor \lnot [\exists x:(Q(x)\land \lnot R(x)]\\=\exists x,\lnot P(x)\lor [\forall x:\lnot Q(x)\lor R(x)]\)
+\section*{(d)}
+\((P\longrightarrow Q)\longrightarrow R\)
+
+\end{document}
+

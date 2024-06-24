@@ -1,0 +1,39 @@
+\documentclass{article}
+\usepackage{graphicx} % Required for inserting images
+\usepackage{amssymb}
+\usepackage{mathtools}
+\usepackage{amsmath}
+\graphicspath{{./images/}}
+
+\makeatletter
+\newcommand*{\rom}[1]{\expandafter\@slowromancap\romannumeral #1@}
+\makeatother
+
+
+
+\title{Midterm of FCS}
+\author{Swen Chan}
+\date{July 2023}
+
+\begin{document}
+
+\maketitle
+
+\section*{3}
+\textbf{(1)}\\
+\underline{If the first letter is 'a'}:
+The passwords can have 1 lowercase-letter or 2 lowercase-letters.\\
+When exists 1 lowercase-letter,number of passwords\(=10*9*8*7*6=30240\);\\
+When exists 2 lowercase-letters,number of passwords\(=26*10*9*8*7*C(5,1)=655200\)\\
+So when the first letter is 'a',the number of passwords\(=30240+655200=\underline{685440}\)\\\\
+\underline{If the first letter is '1'}:
+The passwords can have no/1/2 lowercase-letters.\\
+When no lowercase-letter,number of passwords\(=9*8*7*6*5=15120\)\\
+When exists 1 lowercase-letter,number of passwords\(=26*10*9*8*7*C(5,1)=655200\)\\
+When exists 2 lowercase-letters,number of passwords\(=26^2*10*9*8*C(5,2)=4867200\)\\
+So when the first letter is '1',the number of passwords\(=15120+655200+4867200=\underline{5537520}\)\\\\
+Total number \(=685440+5537520=6222960\)\\
+Thus,there are \textbf{6222960} passwords.
+
+\end{document}
+
